@@ -8,10 +8,55 @@
     />
     <meta name="theme-color" content="#fff7ec" />
     <title>块乐星球 · 把快乐，一块一块拼完整</title>
-    <style>#boot-loader{z-index:5;color:#71717a;background:linear-gradient(#fffdf7 0%,#fff3e2 100%);flex-direction:column;justify-content:center;align-items:center;gap:24px;font-family:LXGW WenKai,PingFang SC,Microsoft YaHei,sans-serif;transition:opacity .4s;display:flex;position:fixed;inset:0}#boot-loader.hide{opacity:0;pointer-events:none}#boot-loader .boot-star{background:#ffd9a0;border-radius:50%;width:72px;height:72px;animation:1.2s ease-in-out infinite boot-pulse;box-shadow:0 0 0 10px #ffd9a059,0 0 0 20px #ffd9a02e}#boot-loader .boot-text{letter-spacing:2px;font-size:18px}@keyframes boot-pulse{0%,to{opacity:.7;transform:scale(.85)}50%{opacity:1;transform:scale(1.1)}}</style>
-    <script type="module" crossorigin src="./assets/index-CTyvKGsK.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dlw3Qzun.css">
-    <script src="https://lf-coze-web-cdn.coze.cn/obj/eden-cn/lm-lgvj/ljhwZthlaukjlkulzlp/coze-game/js/phaser-bridge.min.js?hash=1793250443539"></script>
+    <style>
+      /* 首屏加载动画：在游戏代码与字体就绪前立即显示，避免白屏 */
+      #boot-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        background: linear-gradient(180deg, #fffdf7 0%, #fff3e2 100%);
+        font-family: "LXGW WenKai", "PingFang SC", "Microsoft YaHei",
+          sans-serif;
+        color: #71717a;
+        transition: opacity 0.4s ease;
+      }
+      #boot-loader.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #boot-loader .boot-star {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: #ffd9a0;
+        box-shadow: 0 0 0 10px rgba(255, 217, 160, 0.35),
+          0 0 0 20px rgba(255, 217, 160, 0.18);
+        animation: boot-pulse 1.2s ease-in-out infinite;
+      }
+      #boot-loader .boot-text {
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+      @keyframes boot-pulse {
+        0%,
+        100% {
+          transform: scale(0.85);
+          opacity: 0.7;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 1;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-BPUNHNq2.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-KR8ALl6b.css">
+    <script src="https://lf-coze-web-cdn.coze.cn/obj/eden-cn/lm-lgvj/ljhwZthlaukjlkulzlp/coze-game/js/phaser-bridge.min.js?hash=1793263917138"></script>
   </head>
   <body>
     <main id="game" aria-label="Phaser game canvas"></main>
